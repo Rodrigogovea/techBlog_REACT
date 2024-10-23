@@ -1,5 +1,5 @@
 function Article ({article}) {
-    const {image, title, description} = article
+    const {image, title, description} = article;
     return (
         <>
         <article className="entrada">

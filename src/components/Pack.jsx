@@ -1,4 +1,4 @@
-export default function Pack() {
+function Pack() {
     return(
         <>
            <li className="paquetes__titulo">
@@ -11,3 +11,4 @@ export default function Pack() {
         </>
     );
 }
+export default Pack;
