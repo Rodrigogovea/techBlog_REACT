@@ -4,10 +4,12 @@ import Footer from "./components/Footer";
 import Header from "./components/Header"
 import Pack from "./components/Pack";
 import { db } from "./data/db";
-
+import { db2 } from "./data/db2";
+ 
 function App() {
 
 const [data, setData] = useState(db)
+const [data2, setData2] = useState(db2)
   return (
     <>
     <Header/>
@@ -25,8 +27,13 @@ const [data, setData] = useState(db)
         <aside className="sidebar">
             <h3>Paquetes fotográficos</h3>
                 <ul className="paquetes no-padding">
-                  <Pack/>
-                  <Pack/>
+                  {data2.map((pack)=>(
+                      <Pack
+                      key={pack.id}
+                      pack={pack}
+                      />
+                  )
+                  )}
                 </ul>
         </aside>
     </div>
