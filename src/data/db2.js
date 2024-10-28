@@ -16,5 +16,11 @@ export const db2 = [
         title: "Paquete de fotografía digital completo",
         price: 4000,
         photos: 80
+    },
+    {
+        id: 4,
+        title: "Paquete de fotografía digital premium",
+        price: 5000,
+        photos: "Archivos digitales"
     }
 ]
