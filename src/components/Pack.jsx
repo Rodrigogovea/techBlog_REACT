@@ -1,5 +1,8 @@
-function Pack({pack}) {
-    const { title, price, photos } = pack;
+function Pack({pack, agregarAlCarrito}) {
+    const { id, title, price, photos } = pack
+
+
+
     return(
         <>
            <li className="paquetes__titulo">
@@ -7,7 +10,7 @@ function Pack({pack}) {
                     <p className="paquetes--titulo__etiqueta">Precio: <span className="paquetes--titulo__info">${price}</span></p>
 
                     <p className="paquetes--titulo__etiqueta">Fotos: <span className="paquetes--titulo__info">{photos} pz.</span></p>
-                    <a href="paquete1.html" className="boton boton--secundario">Ver paquete</a>
+                    <a className="boton boton--secundario" onClick={() => agregarAlCarrito(pack)}>Agregar al carrito</a>
             </li>
         </>
     );

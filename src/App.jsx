@@ -10,6 +10,22 @@ function App() {
 
 const [data, setData] = useState(db)
 const [data2, setData2] = useState(db2)
+const [carrito, setCarrito] = useState([])
+
+function agregarAlCarrito(pack) {
+  const existeElemento = carrito.findIndex((packPhoto) => packPhoto.id === pack.id)
+
+  if(existeElemento >= 0) {
+    const carritoActualizado = [...carrito]
+    carritoActualizado[existeElemento].cantidad++
+    setCarrito(carritoActualizado)
+  }
+  else{
+    pack.cantidad = 1
+    setCarrito([...carrito, pack])
+  }
+  
+}
   return (
     <>
     <Header/>
@@ -31,6 +47,7 @@ const [data2, setData2] = useState(db2)
                       <Pack
                       key={pack.id}
                       pack={pack}
+                      agregarAlCarrito={agregarAlCarrito}
                       />
                   )
                   )}
