@@ -1,24 +1,51 @@
-/* .sofadi-one-regular {
-    font-family: "Sofadi One", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 300 to 800
-
-.open-sans-<uniquifier> {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-*/
-
 
 /* paramtros iniciales */
+.negrita{
+    font-weight: 800;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+.fuenteLigera{
+    font-weight: 500;
+}
+
+
+/*Carrito*/
+.carrito {
+    background-color: transparent;
+    border: none;
+    max-width: 2rem;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .carrito #carrito {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    background-color: white;
+  }
+  
+  .carrito:hover #carrito {
+    display: block;
+    background-color: white;
+    padding: 10px;
+    height: fit-content;
+    min-width: 350px;
+    width: fit-content;
+    top: -2;
+    right: 0;
+    left: unset;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  
+  #carrito img {
+    width: 40px;
+  }
+/*Carrito*/
 :root {
     --fuentePrincipal: 'Sofadi One', system-ui;
     --fuenteSecundaria: "Open Sans", sans-serif;
@@ -34,6 +61,7 @@
     --primario: #592202;
     --secundario: #A65F21;
     --constraste: #e3974b;
+    --rojo: #e00707;
 }
 
 html {
@@ -104,7 +132,7 @@ img {
 /* header */
 
 .header{
-    background-image: url(tablet.jpg);
+    background-image: url(/tablet.jpg);
     height: 40rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -196,6 +224,20 @@ img {
     margin-bottom: 2rem;
     border: none;
 }
+/*Boton del carrito*/
+.boton__pequeno {
+    display: block;
+    font-family: var(--fuenteSecundaria);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+    font-weight: var(--fuenteIntermedia);
+    margin-bottom: 2rem;
+    border: none;
+}
+
+/*fin boton carrito*/
 
 .boton:hover{
     cursor: pointer;
@@ -213,6 +255,23 @@ img {
 
 .boton--secundario{
     background-color: var(--secundario);
+}
+
+.restarBoton{
+    background-color: var(--constraste);
+    margin-right: 4px;
+    border-radius: 50%;
+}
+
+.sumarBoton{
+    background-color: var(--constraste);
+    margin-left: 4px;
+    border-radius: 50%;
+}
+
+.eliminarBoton{
+    background-color: var(--rojo);
+    border-radius: 50%;
 }
 
 /* aside styles */
@@ -311,7 +370,7 @@ img {
 /* formato al contacto */
 
 .contacto--fondo{
-    background-image: url(../IMG/book.jpg);
+    background-image: url(/book.jpg);
     height: 25rem;
     background-size: cover;
     background-position: center center;

@@ -1,8 +1,5 @@
 function Pack({pack, agregarAlCarrito}) {
     const { id, title, price, photos } = pack
-
-
-
     return(
         <>
            <li className="paquetes__titulo">
