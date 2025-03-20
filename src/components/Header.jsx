@@ -64,7 +64,7 @@ function Header ({carrito, eliminardelCarrito, incrementarCantidad,decrementarCa
         
                 <div className="header__texto">
                     <h2 className="no-margin">Blog de fotografía</h2>
-                    <p className="no-margin">Información relevante del mundo de la fotografía digital 2025</p>
+                    <p className="no-margin">Lo mejor y la más completa información del mundo de la fotografía</p>
                 </div>
             </div>
         </header>
